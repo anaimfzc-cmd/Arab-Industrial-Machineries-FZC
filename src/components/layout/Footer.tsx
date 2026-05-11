@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin } from "lucide-react";
+import aimLogo from "@/assets/aim-logo.png";
 
 export const Footer = () => {
   return (
@@ -9,8 +10,12 @@ export const Footer = () => {
           {/* Company Info */}
           <div className="space-y-6">
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-primary flex items-center justify-center">
-                <span className="font-display text-primary-foreground text-2xl">AIM</span>
+              <div className="w-12 h-12 flex items-center justify-center">
+                <img
+                  src={aimLogo}
+                  alt="Arab Industrial Logo"
+                  className="h-10 w-auto object-contain"
+                />
               </div>
               <div>
                 <p className="font-display text-lg tracking-wider">Arab Industrial</p>
@@ -71,8 +76,8 @@ export const Footer = () => {
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                 <span className="text-muted-foreground text-sm">
-                  Industrial Area, Sharjah<br />
-                  United Arab Emirates
+                  Office No: SF10236, 10th Floor, Tower 1, RAKEZ Service Centre, Amenity Centre - Al Jazeera Al Hamra Industrial<br />
+                  Ras Al Khaimah, United Arab Emirates
                 </span>
               </li>
               <li className="flex items-center gap-3">
@@ -81,16 +86,16 @@ export const Footer = () => {
                   href="tel:+971000000000"
                   className="text-muted-foreground hover:text-primary transition-colors text-sm"
                 >
-                  +971 00 000 0000
+                  +97154 742 9429
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-primary flex-shrink-0" />
                 <a
-                  href="mailto:info@aim-fzc.com"
+                  href="mailto:contactaimuae@gmail.com"
                   className="text-muted-foreground hover:text-primary transition-colors text-sm"
                 >
-                  info@aim-fzc.com
+                  contactaimuae@gmail.com
                 </a>
               </li>
             </ul>

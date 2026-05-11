@@ -29,35 +29,44 @@ const values = [
 ];
 
 const milestones = [
-  { year: "1998", event: "Company founded in Sharjah, UAE" },
-  { year: "2005", event: "Expanded operations across GCC region" },
-  { year: "2010", event: "Achieved ISO 9001 certification" },
-  { year: "2015", event: "500th major project completed" },
-  { year: "2020", event: "Launched 24/7 technical support services" },
-  { year: "2024", event: "Celebrating 25+ years of industrial excellence" },
+  { year: "2015", event: "Company founded in Ras Al Khaimah, UAE" },
+  { year: "2017", event: "Expanded operations across GCC region" },
+  { year: "2020", event: "300th major project completed" },
+  { year: "2023", event: "Launched 24/7 technical support services" },
+  { year: "2026", event: "Celebrating 10+ years of industrial excellence" },
 ];
 
 const About = () => {
   return (
     <Layout>
-      {/* Hero Section */}
-      <section className="relative py-32 md:py-40">
-        <div 
+           {/*  HERO (MATCH HOME EXACTLY) */}
+      <section className="relative min-h-[70vh] flex items-center">
+        <div
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${heroImage})` }}
         >
-          <div className="absolute inset-0 bg-industrial-dark/90" />
+          <div className="absolute inset-0 bg-gradient-to-r 
+            from-industrial-dark/95 
+            via-industrial-dark/85 
+            to-industrial-dark/30" />
         </div>
-        <div className="container-custom relative z-10">
-          <div className="max-w-3xl">
-            <div className="red-accent-bar mb-6" />
-            <h1 className="industrial-heading text-secondary-foreground mb-6">
-              About Arab Industrial Machinery
-            </h1>
-            <p className="text-xl text-secondary-foreground/80 leading-relaxed">
-              Over 25 years of trusted expertise in industrial machinery 
-              installation, maintenance, and engineering solutions.
-            </p>
+
+        <div className="relative z-10 w-full py-20">
+          <div className="max-w-[1400px] mx-auto">
+            <div className="pl-6 md:pl-12 lg:pl-24 max-w-3xl animate-fade-in-up">
+
+              <div className="red-accent-bar mb-6" />
+
+              <h1 className="industrial-heading text-secondary-foreground mb-6">
+                About Arab Industrial Machinery
+              </h1>
+
+              <p className="text-lg text-secondary-foreground/80">
+                Over 10 years of trusted expertise in industrial machinery 
+                installation, maintenance, and engineering solutions.
+              </p>
+
+            </div>
           </div>
         </div>
       </section>
@@ -69,18 +78,14 @@ const About = () => {
             <div>
               <div className="red-accent-bar mb-6" />
               <h2 className="industrial-subheading text-foreground mb-6">
-                Building Industrial Excellence Since 1998
+                Building Industrial Excellence Since 2015
               </h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  Arab Industrial Machinery FZC was established with a clear mission: to 
-                  provide world-class industrial machinery services that enable factories 
-                  and manufacturing facilities to operate at peak efficiency.
+                  Arab Industrial Machinery FZC was established with a clear mission: to provide world-class industrial machinery services that enable factories and manufacturing facilities to operate at peak efficiency.
                 </p>
                 <p>
-                  From our headquarters in Sharjah, UAE, we serve clients across the 
-                  Middle East, delivering comprehensive solutions that span installation, 
-                  maintenance, fabrication, and technical support.
+                  From our headquarters in Ras Al Khaimah, UAE, we serve clients across the Middle East, delivering comprehensive solutions that span installation, maintenance, fabrication, and technical support.
                 </p>
                 <p>
                   Our team of experienced engineers and technicians brings decades of 
@@ -96,7 +101,7 @@ const About = () => {
                 className="w-full h-auto"
               />
               <div className="absolute -bottom-6 -left-6 bg-primary p-8">
-                <p className="font-display text-5xl text-primary-foreground">25+</p>
+                <p className="font-display text-5xl text-primary-foreground">10+</p>
                 <p className="text-primary-foreground/80 text-sm uppercase tracking-wider mt-1">
                   Years Experience
                 </p>
@@ -246,7 +251,7 @@ const About = () => {
               </h3>
               <div className="grid grid-cols-2 gap-8">
                 {[
-                  { value: "500+", label: "Projects Completed" },
+                  { value: "300+", label: "Projects Completed" },
                   { value: "150+", label: "Industrial Clients" },
                   { value: "99%", label: "Client Satisfaction" },
                   { value: "50+", label: "Expert Engineers" },

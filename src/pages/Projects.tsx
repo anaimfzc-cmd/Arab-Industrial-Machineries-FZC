@@ -4,7 +4,7 @@ import { Layout } from "@/components/layout/Layout";
 import { ArrowRight, MapPin } from "lucide-react";
 import heroImage from "@/assets/hero-industrial.jpg";
 import project1 from "@/assets/project-1.jpg";
-import project2 from "@/assets/project-2.jpg";
+import project2 from "@/assets/project-2.png";
 import project3 from "@/assets/project-3.jpg";
 import project4 from "@/assets/project-4.jpg";
 
@@ -76,37 +76,47 @@ const categories = ["All", "Installation", "Maintenance", "Fabrication", "Commis
 const Projects = () => {
   return (
     <Layout>
-      {/* Hero Section */}
-      <section className="relative py-32 md:py-40">
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${heroImage})` }}
-        >
-          <div className="absolute inset-0 bg-industrial-dark/90" />
-        </div>
-        <div className="container-custom relative z-10">
-          <div className="max-w-3xl">
-            <div className="red-accent-bar mb-6" />
-            <h1 className="industrial-heading text-secondary-foreground mb-6">
-              Our Projects
-            </h1>
-            <p className="text-xl text-secondary-foreground/80 leading-relaxed">
-              A showcase of our completed work across diverse industrial sectors 
-              throughout the Middle East region.
-            </p>
-          </div>
-        </div>
-      </section>
+           {/*  HERO (MATCH HOME EXACTLY) */}
+            <section className="relative min-h-[70vh] flex items-center">
+              <div
+                className="absolute inset-0 bg-cover bg-center"
+                style={{ backgroundImage: `url(${heroImage})` }}
+              >
+                <div className="absolute inset-0 bg-gradient-to-r 
+                  from-industrial-dark/95 
+                  via-industrial-dark/85 
+                  to-industrial-dark/30" />
+              </div>
+      
+              <div className="relative z-10 w-full py-20">
+                <div className="max-w-[1400px] mx-auto">
+                  <div className="pl-6 md:pl-12 lg:pl-24 max-w-3xl animate-fade-in-up">
+      
+                    <div className="red-accent-bar mb-6" />
+      
+                    <h1 className="industrial-heading text-secondary-foreground mb-6">
+                      Our Projects
+                    </h1>
+      
+                    <p className="text-lg text-secondary-foreground/80">
+                      A showcase of our completed work across diverse industrial sectors 
+                      throughout the Middle East region.
+                    </p>
+      
+                  </div>
+                </div>
+              </div>
+            </section>
 
       {/* Stats */}
       <section className="bg-primary py-12">
         <div className="container-custom">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { value: "500+", label: "Projects Completed" },
+              { value: "300+", label: "Projects Completed" },
               { value: "12+", label: "Countries Served" },
               { value: "150+", label: "Satisfied Clients" },
-              { value: "25+", label: "Years Experience" },
+              { value: "10+", label: "Years Experience" },
             ].map((stat) => (
               <div key={stat.label} className="text-center">
                 <p className="font-display text-4xl md:text-5xl text-primary-foreground mb-2">
