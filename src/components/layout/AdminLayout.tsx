@@ -22,6 +22,8 @@ import {
   ChevronRight,
   TriangleAlert,
   X,
+  Menu,
+
 } from "lucide-react";
 
 const API =
@@ -47,6 +49,8 @@ export const AdminLayout = ({
     showLogoutModal,
     setShowLogoutModal,
   ] = useState(false);
+
+  const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
 
   // CONFIRM LOGOUT
   const confirmLogout =
@@ -294,20 +298,35 @@ export const AdminLayout = ({
         "
       >
 
+      <div className="md:hidden fixed top-0 left-0 right-0 z-50 bg-[#020617] border-b border-white/10 p-4">
+        <button onClick={() => setMobileSidebarOpen(true)}>
+          <Menu className="w-7 h-7 text-white" />
+        </button>
+      </div>
+
         {/* SIDEBAR */}
         <aside
-          className="
-            relative
-            hidden
-            md:flex
+          className={`
+            fixed md:relative
+            top-0 left-0
+            h-full
             w-[290px]
-            flex-col
-            border-r
-            border-white/10
+            flex flex-col
+            z-50
+            border-r border-white/10
             bg-[#020617]
-            overflow-hidden
-          "
+            transition-transform duration-300
+            ${mobileSidebarOpen ? "translate-x-0" : "-translate-x-full"}
+            md:translate-x-0
+          `}
         >
+
+        <button
+          onClick={() => setMobileSidebarOpen(false)}
+          className="md:hidden absolute top-5 right-5 z-50"
+        >
+          <X className="w-6 h-6 text-white" />
+        </button>
 
           {/* GLOW */}
           <div
@@ -500,12 +519,7 @@ export const AdminLayout = ({
         </aside>
 
         {/* MAIN */}
-        <main
-          className="
-            flex-1
-            bg-[#020617]
-          "
-        >
+        <main className="flex-1 bg-[#020617] pt-16 md:pt-0">
           {children}
         </main>
 
