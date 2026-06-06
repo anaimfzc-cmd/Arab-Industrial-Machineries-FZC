@@ -1,4 +1,11 @@
 User-agent: *
 Allow: /
 
+Disallow: /admin
+Disallow: /admin/
+Disallow: /login
+Disallow: /register
+Disallow: /chat
+Disallow: /my-bookings
+
 Sitemap: https://aimfzllc.vercel.app/sitemap.xml

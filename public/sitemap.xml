@@ -6,11 +6,23 @@
   </url>
 
   <url>
+    <loc>https://aimfzllc.vercel.app/about</loc>
+  </url>
+
+  <url>
     <loc>https://aimfzllc.vercel.app/services</loc>
+  </url>
+
+  <url>
+    <loc>https://aimfzllc.vercel.app/projects</loc>
   </url>
 
   <url>
     <loc>https://aimfzllc.vercel.app/contact</loc>
   </url>
 
-</urlset>
+  <url>
+    <loc>https://aimfzllc.vercel.app/product-guide</loc>
+  </url>
+
+</urlset>   
